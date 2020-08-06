@@ -1,0 +1,112 @@
+numpy array - created using list and tuples
+
+Numpy - 
+array()
+
+arange() - return evenly spaced value. arange(0,25,2)
+arange(start, stop, step, dtype)  --- stop is compulsory rest all optional
+arange(20, dtype = "complex")
+
+zeros()
+help(np.zeros)
+ syntax - zeros(shape, dtype = float, order = 'C')  --- only shape mandatory
+np.zeros(5)
+np.zeros((5,5))
+
+np.empty([3,4], dtype = "int")
+
+ones()
+
+linspace()
+You need to mention breakpoints. lispace = linearspace
+start and stop mandatory
+restep = difference between intervals/numbers
+endpoint false means 10 will not be included in below example
+linspace(start,stop, num=50, endpoint = true, restep = False, dtype = none, axis=0)
+np.linspace(0,10,25)
+
+eye()
+Returns array filled with zero except in the k-th diagnol, whose values are equal to 1
+eye(N, M= None, k = 0, dtype = 'float', order = 'C')
+M = no.of columns, default N
+K - Index of the diagonal : 0 (default), refers to the main diagonal. positive - upper diagonal, -ve refers negative diagonal
+
+np.eye(3, k = 1)  ---- upper diagonal 1
+np.eye(5)
+np.eye(2,3)
+np.eye(4, k = -1)	
+
+
+identity()
+The identity array is a square array with ones on the main diagonal
+identity(n , dtype = None)
+
+random()  -------------------
+rand()  - uniformly distributed values. 
+np.random.rand(5)
+np.random.rand(5,3)
+
+randn() - normally distributed values.
+np.random.randn(5)
+np.random.randn(2,3)
+
+randf() - uniformly distributed floating point number.
+
+
+Advance - 
+Reshaping - reshape, resize
+numpy.reshape(array, shape, order)
+arryname.reshape(shape, order)
+
+Array flattening -  flatten and ravel
+flatten - will convert ndarray to single dimension array
+
+Dimension Shuffling - transpose and swapaxes
+numpy.transpose(Array, axis=None)
+swapaxes - swap any 2 axes
+numpy.swapaxes(array, axis1, axis2)
+
+Joining Arrays
+Splitting arrays
+Add|Remove elements to array
+
+randint() - uniformly distributed integers in a given range.
+randint(low, high = None, size = None, dtyple = '1')
+randint(1, size = 5)
+randint(1, size = (2,3))
+
+
+
+
+Attributes of array --- Dimension, Shape, Size, Dtype, itemsize
+
+ndim - number of dimension
+a = np.array([1,2,3])
+a.ndim
+
+shape
+a = np.array([1,2,3])
+a.shape
+
+provides no.of rows and columns
+
+size - total no.of elements in the array
+a = np.zeros((2,3,4))
+a.size
+returns 24
+
+
+dtype  -- returns dtype
+c.dtype
+returns dtype('float64')
+
+itemsize
+returns size of item in bytes
+
+Indexing and Slicing
+indexing - to retrieve one value we use indexing
+Slicing - to retrieve collection of values we use slicing  --- arryname[start:stop:index]
+
+Advanced Indexing - 
+Can access elements of an array arbitarily permitting items to be accessed out of order and even repeatedly.
+2 types - integer indexing and boolean indexing
